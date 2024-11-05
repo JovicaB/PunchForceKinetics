@@ -1,6 +1,6 @@
 # Punch Force Kinetics
 
-**PunchForceKinetics** je projekat koji primenjuje mašinsko učenje za analizu i merenje snage udarca i dinamike pokreta tokom udaranja bokserske vreće. Pored toga, projekat pruža zbirne statističke podatke o trening sesijama, uključujući potrošene kalorije, intenzitet treninga, brzinu udaraca i energetsku efikasnost.
+**PunchForceKinetics** je projekat koji primenjuje mašinsko učenje za analizu i merenje snage udarca i dinamike pokreta tokom udaranja vreće za boks. Projekat pruža statističke podatke za svaki udarac i ukupne statističke podatke o trening sesijama, uključujući potrošene kalorije, intenzitet treninga, brzinu udaraca i energetsku efikasnost.
 
 Fokusira se na prepoznavanje udaraca rukom ili nogom, kao i na precizno merenje ključnih trenutaka u pokretu, poput trenutka početka udarca, kontakta sa vrećom i prenosa sile.
 
@@ -10,7 +10,8 @@ Fokusira se na prepoznavanje udaraca rukom ili nogom, kao i na precizno merenje 
 - **Analiza snage udarca** – Merenje vremena i brzine udarca pomoću video okvira za procenu prenosa sile.
 - **Klasifikacija pokreta** – Prepoznavanje da li je pokret iniciran rukom ili nogom, omogućavajući korišćenje specifičnog modela za svaku vrstu pokreta.
 - **Kinetička analiza** – Procena kinetičke i potencijalne energije u ključnim trenucima udarca.
-- **Open-Source i Prilagodljivo** – Kod je dizajniran tako da se može kalibrisati prema fizičkim karakteristikama različitih korisnika.
+- **Open-Source** 
+- **Kalibracija (prilagođavanje) korisniku** 
 
 ## Tehnologije
 
@@ -24,29 +25,24 @@ Fokusira se na prepoznavanje udaraca rukom ili nogom, kao i na precizno merenje 
 1. Klonirajte repozitorijum:
 
    ```bash
-   git clone https://github.com/korisnicko-ime/PunchForceKinetics.git
-   cd PunchForceKinetics
+   git clone https://github.com/JovicaB/PunchForceKinetics.git
 
 2. Instalirajte potrebne zavisnosti:
 
-bash
-pip install -r requirements.txt
+   ```bash
+    pip install -r requirements.txt
 
-3. Podesite GoPro kameru i osigurajte Wi-Fi konekciju da biste mogli da prenosite uživo video stream u Python za dalju analizu i kalibraciju modela.
+3. Podesite GoPro kameru i osigurajte Wi-Fi konekciju za prenos uživo video stream-a u Python radi analize i kalibracije modela.
 
-Upotreba
+## Upotreba
+
 1. Faza: Snimanje i Priprema Podataka
-
-Pokrenite skriptu za snimanje videa pomoću GoPro kamere. Snimljeni video se deli u okvire koji se potom ručno označavaju (početak i kraj svakog udarca) kako bi se stvorio set podataka za treniranje.
-2. Faza: Treniranje i Real-Time Analiza
-
-    Trenira se model za prepoznavanje udaraca rukom i nogom koristeći video okvire.
-    Nakon klasifikacije, koristi se model za procenu energije i prenos sile za svaki udarac.
+2. Faza: Treniranje modela i real-time analiza
 
 ## Budući Razvoj
 
     Automatska kalibracija za personalizovano merenje snage udarca na osnovu fizičkih karakteristika korisnika.
-    Dalja optimizacija klasifikacije pokreta za efikasnije prepoznavanje udaraca rukom ili nogom.
+    Klasifikacija pokreta za efikasnije prepoznavanje udaraca rukom ili nogom.
     Višekanalna analiza – Korišćenje dodatnih senzora (ako su dostupni) za precizniju procenu pritiska i sile.
 
 ## Licenca
